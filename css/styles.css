@@ -1,0 +1,476 @@
+@font-face {
+    font-family: 'GTA Medium';
+    src: url('../fonts/GTA-Art-Deco-Medium.ttf') format('truetype');
+}
+    
+@font-face{
+    font-family: 'GTA Regular';
+    src: url('../fonts/GTA-Art-Deco-Regular.ttf') format('truetype');
+}
+
+body{
+    background-color:  #EEEEEE;
+}
+
+.contenedor{
+    display: grid;
+    min-height: 100dvh; /* Altura mínima de la ventana */
+    grid-template-rows: auto 1fr auto; /* Fija el header y footer, y permite que el contenido principal ocupe el espacio restante */
+}
+
+header {
+    position: sticky; /* Hace que el header se quede fijo */
+    top: 0; /* Lo posiciona en la parte superior de la ventana */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    line-height: 0; /* evita espacio adicional */
+}
+
+.logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 120px; /* para que no crezca demasiado en pantallas grandes */
+}
+
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(33, 33, 33);
+    padding: 10px 30px;
+    gap: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    position: relative; /* Para posicionar el botón absolutamente dentro */
+    max-width: 400px; /* O el valor que prefieras */
+    width: 100%;
+}
+
+.search-bar input[type="search"] {
+    width: 100%;
+    padding: 6px 40px 6px 10px; /* Deja espacio a la derecha para el botón */
+    border-radius: 7px;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-family: 'GTA Regular';
+    box-sizing: border-box;
+}
+
+.search-bar input[type="search"]:focus {
+    outline: none;
+    border: 2px solid transparent;
+    background: linear-gradient(#222, #222) padding-box, linear-gradient(45deg, #03ACE4, #935DBA, #D83CA0) border-box;
+}
+
+.search-bar button {
+    position: absolute;
+    right: 8px; /* Ajusta según tu diseño */
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 6px 12px;
+    border: none;
+    background: transparent;
+    font-family: 'GTA Regular';
+    color: #fff;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.search-bar:focus-within button i { /* '.search-bar:focus-within' aplica estilos cuando cualquier hijo (como el input) está enfocado. */
+    background: linear-gradient(45deg, #03ACE4, #935DBA, #D83CA0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+nav ul {
+    width: 100%;
+    display: flex; /* Hace que los elementos de la lista se alineen horizontalmente */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas si es necesario */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    list-style: none; /* Elimina los puntos de la lista */
+    margin-top: 15px; /* Elimina el margen */
+    margin-left: auto;
+    margin-right: auto; /* Centra el contenedor */
+    gap: 15px; /* Espaciado entre los elementos */
+}
+
+nav a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: rgb(33, 33, 33); /* Color del texto */
+    font-family: 'GTA Regular'; /* Fuente personalizada */
+}
+
+nav a:hover{
+    background: linear-gradient(45deg, #00B7EF, #14729E, #6472C6, #C1378F, #954697);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.reseñas{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px; /* Espaciado entre los elementos */
+    grid-row-gap: 150px; /* Espaciado entre los elementos */
+    justify-items: center; /* Centra los elementos dentro de cada celda */
+    margin-left: 40px; /* Centra el contenedor */
+    margin-right: 40px; /* Centra el contenedor */
+    margin-bottom: 60px;
+}
+
+.reseña{
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos hijos estén en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    padding: 15px;
+    gap: 20px; /* Espaciado entre los elementos */
+    border-radius: 10px;
+    border: 2px solid black;
+    max-width: 90%;/* Limita el ancho máximo de cada div */
+    font-family: 'GTA Regular';
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 0.999);
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+.reseña:hover{
+    box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    transform: translateY(-5px); /* Escala el elemento al pasar el mouse */
+}
+
+.equipos{
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin-left: auto; /* Centra horizontalmente */
+    margin-right: auto; /* Centra horizontalmente */
+    width: 1500px; /* Hace que la imagen sea responsiva */
+    max-width: 100%; /* Hace que la imagen sea responsiva */
+    height: auto; /* Mantiene las proporciones de la imagen */
+    border-radius: 50px; /* Bordes redondeados */
+}
+
+main h2{
+    font-family: 'GTA Regular';
+}
+
+.nosotros{
+    background-color: #EEEEEE;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto; /* Centra el contenedor */
+    margin-top: 40px; /* Espaciado superior */
+    width: 70%; /* Ancho del contenedor */
+}
+
+.nosotros h2{
+    font-family: 'GTA Regular';
+    font-size: 20px;
+    text-align: center; /* Centra el texto */
+}
+
+.nosotros h1{
+    color: rgb(33, 33, 33);
+    font-family: 'GTA Medium';
+    font-size: 30px;
+    text-align: center; /* Centra el texto */
+}
+
+.nosotros p{
+    font-family: 'GTA Regular';
+    font-size: 20px;
+    text-align: center; /* Justifica el texto */
+}
+
+.productos{
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    justify-content: center; /* Espaciado uniforme entre los elementos */
+    gap: 5px; /* Espaciado entre los elementos */
+    align-items: center; /* Alinea los elementos verticalmente */
+    width: 80%; /* Ancho del contenedor */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto; /* Centra el contenedor */
+    margin-right: auto; /* Centra el contenedor */
+    padding: 5px; /* Espaciado interno */
+}
+
+.proce, .mother, .placa, .fuente, .ram, .ssd {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    flex-direction: column; /* Asegura que los elementos hijos estén en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: space-between; /* Distribuye el contenido uniformemente */
+    width: 250px; /* Establece un ancho uniforme */
+    height: 420px; /* Establece una altura uniforme */
+    padding: 10px; /* Espaciado interno uniforme */
+    margin: 10px; /* Espaciado externo uniforme */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 1px solid black;
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 0.999);
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+.proce:hover, .mother:hover, .placa:hover, .fuente:hover, .ram:hover, .ssd:hover{
+    box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    transform: translateY(-5px); /* Escala el elemento al pasar el mouse */
+}
+
+.img-producto{
+    display: flex;
+    width: 80%;
+    margin-top: 10px;
+}
+
+.proce img, .mother img, .placa img, .fuente img, .ram img, .ssd img {
+    display: flex; /* Asegura que las imágenes se comporten como bloques */
+    width: 100%; /* Mantiene el tamaño de las imágenes al 80% del contenedor */
+}
+
+.nombre{
+    font-family: 'GTA Regular';
+    font-size: 15px;
+    margin-top: auto;
+    margin-bottom: auto; /* Espaciado superior para separar del contenido anterior */
+    text-align: center; /* Centra el texto dentro del div */
+}
+
+.desc-producto{
+    display: flex;
+    align-items: center;
+}
+
+.precio-modal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Ancho completo */
+}
+
+.valor {
+    font-family: 'GTA Medium';
+    font-size: 20px;
+    margin-top: 10px; /* Espaciado superior para separar del contenido anterior */
+    margin-bottom: 0;
+}
+
+.imagenes1{
+    display: flex;
+    flex-wrap: wrap; /* Evita que los elementos se envuelvan */
+    justify-content: center; /* Espaciado uniforme entre los elementos */
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto; /* Centra el contenedor */
+    margin-right: auto; /* Centra el contenedor */
+    padding: 5px; /* Espaciado interno */
+    gap: 15px; /* Espaciado entre los elementos */
+}
+
+.imagen1, .imagen2, .imagen3{
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos hijos estén en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    max-width: 90%;/* Limita el ancho máximo de cada div */
+    margin: 0 10px; /* Espaciado horizontal entre los divs */
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 0.999);
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+.imagen1 img, .imagen2 img, .imagen3 img{
+    width: 45%; /* Ajusta el tamaño de la imagen si es necesario */
+    height: auto;
+}
+
+.imagen1 .nombre, .imagen2 .nombre, .imagen3 .nombre{
+    font-family: 'GTA Regular';
+    margin-top: 25px; /* Espaciado superior para separar del contenido anterior */
+    text-align: center; /* Centra el texto dentro del div */
+}
+
+.precio{
+    font-family: 'GTA Medium';
+    font-size: 20px;
+    margin-top: 5px; /* Espaciado superior para separar del contenido anterior */
+    text-align: center; /* Centra el texto del precio */
+}
+
+.imagen1:hover, .imagen2:hover, .imagen3:hover, .imagen4:hover, .imagen5:hover, .imagen6:hover{
+    box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    transform: translateY(-5px); /* Escala el elemento al pasar el mouse */
+}
+
+.contacto{
+    background-color: #EEEEEE;
+    padding: 20px;
+    margin: 20px auto; /* Centra el contenedor */
+    width: 60%; /* Ancho del contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+}
+
+#nombre, #email, #mensaje{
+    font-family: 'GTA Regular'; /* Fuente personalizada */
+    width: 98%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 10px; /* Espaciado inferior */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.botones{
+    display: flex; /* Activa flexbox */
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 10px; /* Espaciado entre los botones */
+    margin-top: 20px; /* Espaciado superior opcional */
+}
+
+#submit, #reset{
+    background-color: rgb(33, 33, 33); /* Color de fondo */
+    color: white; /* Color del texto */
+    font-family: 'GTA Regular'; /* Fuente personalizada */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+#submit:hover, #reset:hover{
+    background: linear-gradient(45deg, #00B7EF, #14729E, #6472C6, #C1378F, #954697);
+    color: #fff; /* Asegura que el texto sea visible */
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-text-fill-color: #fff;
+    transition: background 0.3s;
+}
+
+.msi {
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%; /* Hace que la imagen sea responsiva */
+}
+
+.msi img {
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin-left: auto; /* Centra horizontalmente */
+    margin-right: auto; /* Centra horizontalmente */
+    width: auto; /* Hace que la imagen sea responsiva */
+    border-radius: 30px; /* Bordes redondeados */
+}
+
+footer{
+    background-color: rgb(33, 33, 33);
+    font-family: 'GTA Regular';
+    color: white;
+}
+
+.redes{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.redes i{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.redes i:hover{
+    background: linear-gradient(45deg, #00B7EF, #14729E, #6472C6, #C1378F, #954697);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+footer p{
+    font-size: small;
+    text-align: center;
+    margin-top: 20px; /* Espaciado superior */
+}
+
+.mail{
+    color: white;
+}
+
+.mail:hover{
+    background: linear-gradient(45deg, #00B7EF, #14729E, #6472C6, #C1378F, #954697);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
+@media only screen and (max-width: 680px){
+    .msi img{
+        max-width: 80%;
+    }
+}
+
+@media only screen and (max-width: 665px){
+    .navbar{
+        flex-direction: row; /* Horizontal */
+        justify-content: space-between; /* Logo a la izquierda, search-bar a la derecha */
+        align-items: center;
+        width: 100%;
+        padding: 10px 15px;
+    }
+    .logo {
+        margin-left: 0;
+    }
+    .search-bar{
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 60%; /* Ajusta según tu diseño */
+    }
+
+        .logo-nosotros{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 490px){
+    .navbar{
+        flex-direction: column; /* Vertical */
+        align-items: center; /* Centra los elementos */
+        gap: 15px; /* Espaciado entre los elementos */
+    }
+    .search-bar{
+        width: 100%; /* Ancho completo */
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .logo-nosotros{
+        width: 50%;
+    }
+}

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/favicon-48x48.png" sizes="48x48" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Productos | ZonaGamer</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header>
+            <div class="navbar">
+                <a href="./index.html" class="logo">
+                    <img src="./img/logo2.png" alt="Logo de ZonaGamer">
+                </a>
+                <form class="search-bar" action="#" method="get">
+                    <input type="search" name="q" placeholder="Buscar productos">
+                    <button type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </header>
+
+        <main>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./nosotros.html">Nosotros</a></li>
+                    <li><a href="./productos.html">Productos</a></li>
+                    <li><a href="./ubicacion.html">Ubicacion</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                    <li><a href="./reseñas.html">Reseñas</a></li>
+                </ul>
+            </nav>
+
+            <div class="productos">
+                <div class="proce">
+                    <div class="img-producto">
+                        <img src="./img/9700x.jpg" alt="Ryzen 7 9700x">
+                    </div>
+                    <div class="desc-producto">
+                        <p class="nombre">Procesador AMD Ryzen 7 9700X 5.5GHz Turbo AM5</p>
+                    </div>
+                    <div class="precio-modal">
+                        <p class="valor">$ 450.000</p>
+                        <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalProce">Ver más</button>
+                    </div>
+                </div>
+                <div class="mother">
+                    <div class="img-producto">
+                        <img src="./img/X870-e.png" alt="X870-E">
+                    </div>
+                    <div class="desc-producto">
+                        <p class="nombre">Motherboard Asus (am5) Rog Strix X870E-E Gaming Wifi</p>
+                    </div>
+                    <div class="precio-modal">
+                        <p class="valor">$ 760.000</p>
+                        <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalMother">Ver más</button>
+                    </div>
+                </div>
+                <div class="placa">
+                    <div class="img-producto">
+                        <img src="./img/5080.jpg" alt="RTX 5080">
+                    </div>
+                    <p class="nombre">Placa de Video NVIDIA Gigabyte GeForce RTX™ 5080 GAMING OC 16G</p>
+                    <div class="precio-modal">
+                        <p class="valor">$ 2.000.000</p>
+                        <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalPlaca">Ver más</button>
+                    </div>
+                </div>
+                <div class="fuente">
+                    <div class="img-producto">
+                        <img src="./img/Fuente.png" alt="Fuente de Poder">
+                    </div>
+                    <p class="nombre">Fuente de Poder Corsair 850W 80 Plus Gold</p>
+                    <div class="precio-modal">
+                        <p class="valor">$ 140.000</p>
+                        <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalFuente">Ver más</button>
+                    </div>
+                </div>
+                <div class="ram">
+                    <div class="img-producto">
+                        <img src="./img/Dominator-Titanium.png" alt="Memoria RAM">
+                    </div>
+                    <div class="desc-producto">
+                        <p class="nombre">Memoria Ram Corsair 32gb 2x16gb Ddr5 6000MHz Dominator Titanium Rgb Amd Expo & Intel Xmp Cl30</p>
+                    </div>
+                    <div class="precio-modal">
+                        <p class="valor">$ 246.000</p>
+                        <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalRAM">Ver más</button>
+                    </div>
+                </div>
+                <div class="ssd">
+                    <div class="img-producto">
+                        <img src="./img/M.2.png" alt="SSD">
+                    </div>
+                        <p class="nombre">SSD M.2 NVME WD_BLACK SN850X 2TB GEN 4</p>
+                    <div class="precio-modal">
+                        <p class="valor">$ 139.000</p>
+                        <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalSSD">Ver más</button>
+                    </div>
+                </div>
+            </div>
+
+        <div class="modal fade" id="modalProce" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Procesador AMD Ryzen 7 9700X 5.5GHz Turbo AM5</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="./img/9700x.jpg" alt="Ryzen 7 9700x" class="img-fluid">
+                        <br>
+                        <br>
+                        <ul>
+                            <li><strong>Nombre:</strong> AMD Ryzen™ 7 9700X</li>
+                            <li><strong>Familia:</strong> Ryzen</li>
+                            <li><strong>Serie:</strong> Ryzen 9000 Series</li>
+                            <li><strong>Formato:</strong> Computadoras de escritorio, Procesador en caja</li>
+                            <li><strong>Market Segment:</strong> Enthusiast Desktop</li>
+                            <li><strong>AMD PRO Technologies:</strong> No</li>
+                            <li><strong>Disponibilidad regional:</strong> Global</li>
+                            <li><strong>Nombre de código anterior:</strong> Granite Ridge AM5</li>
+                            <li><strong>Processor Architecture:</strong> Zen 5</li>
+                            <li><strong>N.º de núcleos de CPU:</strong> 8</li>
+                            <li><strong>Múltiples subprocesos (SMT):</strong> Sí</li>
+                            <li><strong>N.º de subprocesos:</strong> 16</li>
+                            <li><strong>Reloj turbo máximo:</strong> Hasta 5.5 GHz</li>
+                            <li><strong>Reloj base:</strong> 3.8 GHz</li>
+                            <li><strong>Caché L1:</strong> 640 KB</li>
+                            <li><strong>Caché L2:</strong> 8 MB</li>
+                            <li><strong>Caché L3:</strong> 32 MB</li>
+                            <li><strong>TDP predeterminada:</strong> 65W</li>
+                            <li><strong>Tecnología de procesador para núcleos de CPU:</strong> TSMC 4nm FinFET</li>
+                            <li><strong>Tecnología de procesador para chip de E/S:</strong> TSMC 6nm FinFET</li>
+                            <li><strong>Recuento del chip del paquete:</strong> 2</li>
+                            <li><strong>Desbloqueado para overclocking:</strong> Sí</li>
+                            <li><strong>AMD EXPO™ Memory Overclocking Technology:</strong> Sí</li>
+                            <li><strong>Precision Boost Overdrive:</strong> Sí</li>
+                            <li><strong>Compensaciones de voltaje del optimizador de curva:</strong> Sí</li>
+                            <li><strong>AMD Ryzen™ Master Support:</strong> Sí</li>
+                            <li><strong>Socket de CPU:</strong> AM5</li>
+                            <li><strong>Supporting Chipsets:</strong> A620, X670E, X670, B650E, B650, X870E, X870, B840, B850</li>
+                            <li><strong>CPU Boost Technology:</strong> Precision Boost 2</li>
+                            <li><strong>Conjunto de instrucciones:</strong> x86-64</li>
+                            <li><strong>Extensiones compatibles:</strong> AES, AMD-V, AVX, AVX2, AVX512, FMA3, MMX-plus, SHA, SSE, SSE2, SSE3, SSE4.1, SSE4.2, SSE4A, SSSE3, x86-64</li>
+                            <li><strong>Solución térmica (producto en caja):</strong> No incluido</li>
+                            <li><strong>Recommended Cooler:</strong> Premium air cooler recommended for optimal performance</li>
+                            <li><strong>Temperatura de funcionamiento máxima (Tjmax):</strong> 95°C</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalMother" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Motherboard Asus (am5) Rog Strix X870E-E Gaming Wifi</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                <div class="modal-body">
+                    <img src="./img/X870-e.png" alt="Asus X870E-E" class="img-fluid">
+                    <br>
+                    <br>
+                    <ul>
+                        <li><strong>Modelo:</strong> ROG STRIX X870E-E GAMING WIFI</li>
+                        <li><strong>Socket de CPU:</strong> AMD AM5</li>
+                        <li><strong>Chipset:</strong> AMD X870E</li>
+                        <li><strong>Memoria:</strong> 4 x DIMM DDR5, máx. 256GB</li>
+                        <li><strong>Velocidad de memoria:</strong> Hasta 8000+MT/s (OC) con Ryzen™ 9000 Series</li>
+                        <li><strong>Arquitectura de memoria:</strong> Dual Channel</li>
+                        <li><strong>Perfiles de Overclocking:</strong> AMD EXTended Profiles for Overclocking (EXPO™)</li>
+                        <li><strong>Gráficos:</strong> 1 x HDMI, 2 x USB4 Type-C</li>
+                        <li><strong>Ranuras de expansión:</strong> 
+                            <ul>
+                                <li>1 x PCIe 5.0 x16 (Ryzen™ 9000 & 7000 Series)</li>
+                                <li>1 x PCIe 4.0 x16 (Ryzen™ 8000 Series)</li>
+                                <li>1 x PCIe 4.0 x16 (AMD X870E Chipset)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Almacenamiento:</strong> 
+                            <ul>
+                                <li>5 x M.2 slots</li>
+                                <li>4 x SATA 6Gb/s ports</li>
+                            </ul>
+                        </li>
+                        <li><strong>Red:</strong> Realtek 5Gb Ethernet, Wi-Fi 7 (2x2), Bluetooth 5.4</li>
+                        <li><strong>Puertos USB traseros:</strong> 
+                            <ul>
+                                <li>2 x USB4 (40Gbps)</li>
+                                <li>1 x USB 20Gbps Type-C (PD Fast-charge)</li>
+                                <li>10 x USB 10Gbps (9 Type-A + 1 Type-C)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Puertos USB frontales:</strong> 
+                            <ul>
+                                <li>1 x USB 20Gbps Type-C</li>
+                                <li>2 x USB 5Gbps headers (4 puertos adicionales)</li>
+                                <li>3 x USB 2.0 headers (6 puertos adicionales)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Audio:</strong> ROG SupremeFX 7.1 Surround Sound, ALC4080</li>
+                        <li><strong>Salidas de audio:</strong> 2 x jacks dorados, 1 x S/PDIF óptico</li>
+                        <li><strong>Dimensiones:</strong> ATX (30.5 cm x 24.4 cm)</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalPlaca" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Placa de Video NVIDIA Gigabyte GeForce RTX™ 5080 GAMING OC 16G</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="./img/5080.jpg" alt="Gigabyte 5080" class="img-fluid">
+                    <br>
+                    <br>
+                    <ul>
+                        <li><strong>Modelo:</strong> GeForce RTX™ 5080 GAMING OC 16G</li>
+                        <li><strong>Clock del núcleo:</strong> 2730 MHz (Referencia: 2617 MHz)</li>
+                        <li><strong>Cores CUDA®:</strong> 10752</li>
+                        <li><strong>Clock de memoria:</strong> 30 Gbps</li>
+                        <li><strong>Tamaño de memoria:</strong> 16GB</li>
+                        <li><strong>Tipo de memoria:</strong> GDDR7</li>
+                        <li><strong>Bus de memoria:</strong> 256 bit</li>
+                        <li><strong>Bus de tarjeta:</strong> PCI-E 5.0</li>
+                        <li><strong>Resolución máxima digital:</strong> 7680 x 4320</li>
+                        <li><strong>Multi-view:</strong> 4</li>
+                        <li><strong>Tamaño de la tarjeta:</strong> L=340 W=140 H=70 mm</li>
+                        <li><strong>Formato de PCB:</strong> ATX</li>
+                        <li><strong>DirectX:</strong> DirectX 12 API</li>
+                        <li><strong>OpenGL:</strong> OpenGL 4.6</li>
+                        <li><strong>Fuente de alimentación recomendada:</strong> 850W</li>
+                        <li><strong>Conectores de energía:</strong> 16 pin x1</li>
+                        <li><strong>Salidas:</strong> 
+                            <ul>
+                                <li>DisplayPort 2.1b x3</li>
+                                <li>HDMI 2.1b x1</li>
+                            </ul>
+                        </li>
+                        <li><strong>Accesorios incluidos:</strong> 
+                            <ul>
+                                <li>Manual de VGA</li>
+                                <li>Aviso de garantía</li>
+                                <li>Adaptador 12V-2x6 a 3x PCIe 8pin</li>
+                                <li>Soporte versátil para VGA</li>
+                                <li>Manual del soporte versátil para VGA</li>
+                            </ul>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalFuente" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Fuente de Poder Corsair 850W 80 Plus Gold</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="./img/Fuente.png" alt="Fuente Cooler Master" class="img-fluid">
+                    <br>
+                    <br>
+                    <ul>
+                        <li><strong>Versión ATX:</strong> ATX 12V Ver. 3.0</li>
+                        <li><strong>PFC:</strong> Active PFC</li>
+                        <li><strong>Voltaje de entrada:</strong> 100-240V</li>
+                        <li><strong>Corriente de entrada:</strong> 10-5A</li>
+                        <li><strong>Frecuencia de entrada:</strong> 50-60Hz</li>
+                        <li><strong>Dimensiones (L x W x H):</strong> 160 x 150 x 86 mm</li>
+                        <li><strong>Tamaño del ventilador:</strong> 120mm</li>
+                        <li><strong>Rodamiento del ventilador:</strong> HDB</li>
+                        <li><strong>Velocidad del ventilador:</strong> 2500 RPM</li>
+                        <li><strong>Eficiencia:</strong> ≥90% @ Carga típica</li>
+                        <li><strong>Certificación 80 PLUS:</strong> 80 PLUS Gold</li>
+                        <li><strong>Compatibilidad con ErP 2014 Lot 3:</strong> Sí</li>
+                        <li><strong>Temperatura de operación:</strong> 0-40°C</li>
+                        <li><strong>Señal de encendido:</strong> 100 - 150 ms</li>
+                        <li><strong>Tiempo de retención:</strong> ≥16ms a 80% de carga</li>
+                        <li><strong>MTBF:</strong> >100,000 horas</li>
+                        <li><strong>Protecciones:</strong> OPP, OVP, OTP, OCP, SCP, UVP, Protección contra sobretensiones e inrush</li>
+                        <li><strong>Regulaciones:</strong> cTUVus, TUV, CE, FCC, BSMI, CCC, EAC, RCM, UKCA, RoHS2.0 / BIS, KC (según región)</li>
+                        <li><strong>Conectores ATX 24 Pin:</strong> 1</li>
+                        <li><strong>Conectores EPS 4+4 Pin:</strong> 1</li>
+                        <li><strong>Conectores EPS 8 Pin:</strong> 1</li>
+                        <li><strong>Conectores SATA:</strong> 6</li>
+                        <li><strong>Conectores periféricos 4 Pin:</strong> 2</li>
+                        <li><strong>Conectores PCI-e 6+2 Pin:</strong> 4</li>
+                        <li><strong>Conector 12VHPWR:</strong> 1</li>
+                        <li><strong>Serie:</strong> GX Series</li>
+                        <li><strong>Certificación 80 Plus:</strong> Gold</li>
+                        <li><strong>Modularidad:</strong> Fully Modular</li>
+                        <li><strong>Categoría:</strong> Above 750W</li>
+                        <li><strong>Factor de forma:</strong> ATX</li>
+                        <li><strong>Potencia:</strong> 850W</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalRAM" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Memoria Ram Corsair 32gb 2x16gb Ddr5 6000MHz Dominator Titanium Rgb Amd Expo & Intel Xmp Cl30</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="./img/Dominator-Titanium.png" alt="Dominator Titanium" class="img-fluid">
+                    <br>
+                    <br>
+                    <ul>
+                        <li><strong>Tamano de la memoria:</strong> 32GB (2 x 16GB)</li>
+                        <li><strong>Latencia probada:</strong> 30-36-36-76</li>
+                        <li><strong>Velocidad probada:</strong> 6000 MT/s</li>
+                        <li><strong>Voltaje probado:</strong> 1.40V</li>
+                        <li><strong>Voltaje SPD:</strong> 1.1V</li>
+                        <li><strong>Clasificación de velocidad:</strong> PC5-48000 (DDR5-6000)</li>
+                        <li><strong>Velocidad SPD:</strong> 4800MHz</li>
+                        <li><strong>Latencia del SPD:</strong> 40-40-40-77</li>
+                        <li><strong>Perfil de rendimiento:</strong> EXPO & XMP</li>
+                        <li><strong>Formato de memoria del paquete:</strong> UDIMM</li>
+                        <li><strong>Serie de memoria:</strong> DOMINATOR TITANIUM</li>
+                        <li><strong>Ilimunación LED:</strong> RGB</li>
+                        <li><strong>Peso:</strong> 0.338</li>
+                        <li><strong>Difusor de calor:</strong> Aluminio</li>
+                        <li><strong>Ventilador incluido:</strong> No</li>
+                        <li><strong>Color de la memoria:</strong> Gris</li>
+                        <li><strong>Compatibilidad de memoria:</strong> AMD serie 600, Intel serie 600, Intel serie 700</li>
+                        <li><strong>Tipo de memoria:</strong> DDR5</li>
+                        <li><strong>Consumo de energía:</strong> Overclock PMIC</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalSSD" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">SSD M.2 NVME WD_BLACK SN850X 2TB GEN 4</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="./img/M.2.png" alt="WD_BLACK 2TB" class="img-fluid">
+                    <br>
+                    <br>
+                    <ul>
+                        <li><strong>Capacidad:</strong> 2 TB</li>
+                        <li><strong>Formato:</strong> M.2 2280</li>
+                        <li><strong>Conector:</strong> M.2</li>
+                        <li><strong>Rendimiento de lectura secuencial:</strong> 7300MB/s</li>
+                        <li><strong>Rendimiento de escritura secuencial:</strong> 6600MB/s</li>
+                        <li><strong>Lectura aleatoria:</strong> 1200K IOPS</li>
+                        <li><strong>Escritura aleatoria:</strong> 1100K IOPS</li>
+                        <li><strong>Interfaz:</strong> PCIe Gen4 x4</li>
+                        <li><strong>Garantía:</strong> Garantía limitada de 5 años</li>
+                        <li><strong>Resistencia (TBW):</strong> 1200</li>
+                        <li><strong>Dimensiones (largo x ancho x alto):</strong> 3.15" x 0.87" x 0.09"</li>
+                        <li><strong>Peso:</strong> 7.5g</li>
+                        <li><strong>Número de modelo:</strong> WDS200T2X0E</li>
+                        <li><strong>Temperatura operativa:</strong> 0°C a 85°C</li>
+                        <li><strong>Temperatura no operativa:</strong> -40°C a 85°C</li>
+                        <li><strong>Certificaciones:</strong> BSMI, CAN ICES-3(B)/NMB-3(B), CE, FCC, KCC, Morocco, RCM, TUV, UL, VCCI</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+        </main>
+
+        <footer>
+            <div class="redes">
+                <a href="./index.html"><i class="fa-brands fa-instagram"></i></a>
+                <a href="./index.html"><i class="fa-brands fa-twitter"></i></a>
+                <a href="./index.html"><i class="fa-brands fa-facebook"></i></a>
+                <a href="./index.html"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <p>&copy; 2025 ZonaGamer. Todos los derechos reservados.</p>
+            <p>Desarrollado por Franco Molina González | <a href="mailto:molinagonzalezfranco@gmail.com" class="mail">molinagonzalezfranco@gmail.com</a></p>
+        </footer>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    
+</body>
+</html>
