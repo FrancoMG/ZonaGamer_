@@ -92,6 +92,36 @@ header {
     background-clip: text;
 }
 
+.carrito-compras{
+    display: block;
+    text-decoration: none;
+    list-style: none;
+    color: #EEEEEE;
+}
+
+.carrito-compras:hover{
+    background: linear-gradient(45deg, #00B7EF, #14729E, #6472C6, #C1378F, #954697);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.carrito-total-row {
+    display: flex;
+    width: 100%;
+    font-family: 'GTA Medium';
+    font-size: 1.2em;
+    border-top: 2px solid #222;
+    padding-top: 8px;
+    margin-top: 8px;
+}
+
+.col-total-precio {
+    flex: 1.5 1 0;      /* Hace que esta columna sea más ancha */
+    text-align: right;  /* Alinea el precio total a la derecha */
+    padding-right: 20%; /* Opcional: agrega espacio extra a la derecha */
+}
+
 nav ul {
     width: 100%;
     display: flex; /* Hace que los elementos de la lista se alineen horizontalmente */
@@ -115,6 +145,15 @@ nav a:hover{
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+#tabla-carrito img {
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+#tabla-carrito td {
+    vertical-align: middle;
 }
 
 .reseñas{
@@ -214,7 +253,7 @@ main h2{
     flex-direction: column; /* Asegura que los elementos hijos estén en columna */
     align-items: center; /* Centra los elementos horizontalmente */
     justify-content: space-between; /* Distribuye el contenido uniformemente */
-    width: 250px; /* Establece un ancho uniforme */
+    width: 290px; /* Establece un ancho uniforme */
     height: 420px; /* Establece una altura uniforme */
     padding: 10px; /* Espaciado interno uniforme */
     margin: 10px; /* Espaciado externo uniforme */
