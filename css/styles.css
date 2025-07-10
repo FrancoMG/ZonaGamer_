@@ -1,3 +1,4 @@
+/******************************************* FONTS *******************************************/
 @font-face {
     font-family: 'GTA Medium';
     src: url('../fonts/GTA-Art-Deco-Medium.ttf') format('truetype');
@@ -8,6 +9,8 @@
     src: url('../fonts/GTA-Art-Deco-Regular.ttf') format('truetype');
 }
 
+
+/******************************************* BODY *******************************************/
 body{
     background-color:  #EEEEEE;
 }
@@ -18,6 +21,12 @@ body{
     grid-template-rows: auto 1fr auto; /* Fija el header y footer, y permite que el contenido principal ocupe el espacio restante */
 }
 
+main h2{
+    font-family: 'GTA Regular';
+}
+
+
+/******************************************* HEADER *******************************************/
 header {
     position: sticky; /* Hace que el header se quede fijo */
     top: 0; /* Lo posiciona en la parte superior de la ventana */
@@ -119,9 +128,11 @@ header {
 .col-total-precio {
     flex: 1.5 1 0;      /* Hace que esta columna sea más ancha */
     text-align: right;  /* Alinea el precio total a la derecha */
-    padding-right: 20%; /* Opcional: agrega espacio extra a la derecha */
+    padding-right: 0; /* Opcional: agrega espacio extra a la derecha */
 }
 
+
+/******************************************* NAVEGADOR *******************************************/
 nav ul {
     width: 100%;
     display: flex; /* Hace que los elementos de la lista se alineen horizontalmente */
@@ -147,49 +158,9 @@ nav a:hover{
     -webkit-text-fill-color: transparent;
 }
 
-#tabla-carrito img {
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
 
-#tabla-carrito td {
-    vertical-align: middle;
-}
-
-.reseñas{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 20px; /* Espaciado entre los elementos */
-    grid-row-gap: 150px; /* Espaciado entre los elementos */
-    justify-items: center; /* Centra los elementos dentro de cada celda */
-    margin-left: 40px; /* Centra el contenedor */
-    margin-right: 40px; /* Centra el contenedor */
-    margin-bottom: 60px;
-}
-
-.reseña{
-    background-color: #FFFFFF;
-    display: flex;
-    flex-direction: column; /* Asegura que los elementos hijos estén en columna */
-    align-items: center; /* Centra los elementos horizontalmente */
-    padding: 15px;
-    gap: 20px; /* Espaciado entre los elementos */
-    border-radius: 10px;
-    border: 2px solid black;
-    max-width: 90%;/* Limita el ancho máximo de cada div */
-    font-family: 'GTA Regular';
-    transition-duration: 0.4s;
-    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 0.999);
-    transition-delay: 0s;
-    transition-property: all;
-}
-
-.reseña:hover{
-    box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
-    transform: translateY(-5px); /* Escala el elemento al pasar el mouse */
-}
-
+/******************************************* MAIN *******************************************/
+/***************** INDEX *****************/
 .equipos{
     display: block; /* Asegura que la imagen se comporte como un bloque */
     margin-left: auto; /* Centra horizontalmente */
@@ -200,10 +171,75 @@ nav a:hover{
     border-radius: 50px; /* Bordes redondeados */
 }
 
-main h2{
-    font-family: 'GTA Regular';
+.imagenes1{
+    display: flex;
+    flex-wrap: wrap; /* Evita que los elementos se envuelvan */
+    justify-content: center; /* Espaciado uniforme entre los elementos */
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto; /* Centra el contenedor */
+    margin-right: auto; /* Centra el contenedor */
+    padding: 5px; /* Espaciado interno */
+    gap: 15px; /* Espaciado entre los elementos */
 }
 
+.imagen1, .imagen2, .imagen3{
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos hijos estén en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    max-width: 90%;/* Limita el ancho máximo de cada div */
+    margin: 0 10px; /* Espaciado horizontal entre los divs */
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 0.999);
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+.imagen1 img, .imagen2 img, .imagen3 img{
+    width: 45%; /* Ajusta el tamaño de la imagen si es necesario */
+    height: auto;
+}
+
+.imagen1 .nombre, .imagen2 .nombre, .imagen3 .nombre{
+    font-family: 'GTA Regular';
+    margin-top: 25px; /* Espaciado superior para separar del contenido anterior */
+    text-align: center; /* Centra el texto dentro del div */
+}
+
+.precio{
+    font-family: 'GTA Medium';
+    font-size: 20px;
+    margin-top: 5px; /* Espaciado superior para separar del contenido anterior */
+    text-align: center; /* Centra el texto del precio */
+}
+
+.imagen1:hover, .imagen2:hover, .imagen3:hover, .imagen4:hover, .imagen5:hover, .imagen6:hover{
+    box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    transform: translateY(-5px); /* Escala el elemento al pasar el mouse */
+}
+
+.msi {
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%; /* Hace que la imagen sea responsiva */
+}
+
+.msi img {
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin-left: auto; /* Centra horizontalmente */
+    margin-right: auto; /* Centra horizontalmente */
+    width: auto; /* Hace que la imagen sea responsiva */
+    border-radius: 30px; /* Bordes redondeados */
+}
+
+
+/***************** NOSOTROS *****************/
 .nosotros{
     background-color: #EEEEEE;
     padding: 20px;
@@ -232,6 +268,8 @@ main h2{
     text-align: center; /* Justifica el texto */
 }
 
+
+/***************** PRODUCTOS *****************/
 .productos{
     display: flex;
     flex-wrap: wrap; /* Permite que los elementos se envuelvan */
@@ -308,58 +346,8 @@ main h2{
     margin-bottom: 0;
 }
 
-.imagenes1{
-    display: flex;
-    flex-wrap: wrap; /* Evita que los elementos se envuelvan */
-    justify-content: center; /* Espaciado uniforme entre los elementos */
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: auto; /* Centra el contenedor */
-    margin-right: auto; /* Centra el contenedor */
-    padding: 5px; /* Espaciado interno */
-    gap: 15px; /* Espaciado entre los elementos */
-}
 
-.imagen1, .imagen2, .imagen3{
-    background-color: #FFFFFF;
-    display: flex;
-    flex-direction: column; /* Asegura que los elementos hijos estén en columna */
-    align-items: center; /* Centra los elementos horizontalmente */
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid black;
-    max-width: 90%;/* Limita el ancho máximo de cada div */
-    margin: 0 10px; /* Espaciado horizontal entre los divs */
-    transition-duration: 0.4s;
-    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 0.999);
-    transition-delay: 0s;
-    transition-property: all;
-}
-
-.imagen1 img, .imagen2 img, .imagen3 img{
-    width: 45%; /* Ajusta el tamaño de la imagen si es necesario */
-    height: auto;
-}
-
-.imagen1 .nombre, .imagen2 .nombre, .imagen3 .nombre{
-    font-family: 'GTA Regular';
-    margin-top: 25px; /* Espaciado superior para separar del contenido anterior */
-    text-align: center; /* Centra el texto dentro del div */
-}
-
-.precio{
-    font-family: 'GTA Medium';
-    font-size: 20px;
-    margin-top: 5px; /* Espaciado superior para separar del contenido anterior */
-    text-align: center; /* Centra el texto del precio */
-}
-
-.imagen1:hover, .imagen2:hover, .imagen3:hover, .imagen4:hover, .imagen5:hover, .imagen6:hover{
-    box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
-    transform: translateY(-5px); /* Escala el elemento al pasar el mouse */
-}
-
+/***************** CONTACTO *****************/
 .contacto{
     background-color: #EEEEEE;
     padding: 20px;
@@ -404,21 +392,65 @@ main h2{
     transition: background 0.3s;
 }
 
-.msi {
-    align-items: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 100%; /* Hace que la imagen sea responsiva */
+
+/***************** RESEÑAS (UTILIZADAS ANTES DE IMPLEMENTAR LA API) *****************/
+.reseñas{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px; /* Espaciado entre los elementos */
+    grid-row-gap: 150px; /* Espaciado entre los elementos */
+    justify-items: center; /* Centra los elementos dentro de cada celda */
+    margin-left: 40px; /* Centra el contenedor */
+    margin-right: 40px; /* Centra el contenedor */
+    margin-bottom: 60px;
 }
 
-.msi img {
-    display: block; /* Asegura que la imagen se comporte como un bloque */
-    margin-left: auto; /* Centra horizontalmente */
-    margin-right: auto; /* Centra horizontalmente */
-    width: auto; /* Hace que la imagen sea responsiva */
-    border-radius: 30px; /* Bordes redondeados */
+.reseña{
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos hijos estén en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    padding: 15px;
+    gap: 20px; /* Espaciado entre los elementos */
+    border-radius: 10px;
+    border: 2px solid black;
+    max-width: 90%;/* Limita el ancho máximo de cada div */
+    font-family: 'GTA Regular';
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 0.999);
+    transition-delay: 0s;
+    transition-property: all;
 }
 
+.reseña:hover{
+    box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    transform: translateY(-5px); /* Escala el elemento al pasar el mouse */
+}
+
+
+
+/***************** CARRITO *****************/
+#tabla-carrito img {
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+#tabla-carrito td {
+    vertical-align: middle;
+}
+
+#finalizar-compra:hover{
+    background: linear-gradient(45deg, #00B7EF, #14729E, #6472C6, #C1378F, #954697);
+    color: #fff; /* Asegura que el texto sea visible */
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-text-fill-color: #fff;
+    transition: background 0.3s;
+}
+
+
+/******************************************* FOOTER Y MENSAJE AGREGAR PRODUCTO *******************************************/
 footer{
     background-color: rgb(33, 33, 33);
     font-family: 'GTA Regular';
@@ -466,9 +498,27 @@ footer p{
     -webkit-text-fill-color: transparent;
 }
 
+.mensaje-flotante {
+    position: fixed;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, 0) scale(1);
+    opacity: 0;
+    z-index: 9999;
+    transition: opacity 0.4s, transform 0.4s;
+    pointer-events: none;
+    min-width: 280px;
+    text-align: center;
+    font-size: 1.0rem;
+}
+
+.mensaje-flotante.mostrar {
+    opacity: 1;
+    transform: translate(-50%, -120px) scale(1.1);
+}
 
 
-
+/******************************************* MEDIA QUERYS *******************************************/
 @media only screen and (max-width: 680px){
     .msi img{
         max-width: 80%;

@@ -73,11 +73,13 @@ function agregarAlCarrito(producto) {
         let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
         let contador = document.getElementById('contador-carrito');
         if (contador) {
-            if (carrito.length === 0) {
-                contador.style.display = 'none'; // Oculta el contador si está vacío
+            // Suma la cantidad total de unidades en el carrito
+            const totalUnidades = carrito.reduce((acc, prod) => acc + (prod.cantidad || 1), 0);
+            if (totalUnidades === 0) {
+                contador.style.display = 'none';
             } else {
-                contador.style.display = 'inline'; // Muestra el contador si hay productos
-                contador.textContent = carrito.length;
+                contador.style.display = 'inline';
+                contador.textContent = totalUnidades;
             }
         }
     }
@@ -174,5 +176,59 @@ document.addEventListener('DOMContentLoaded', function() {
             location.reload();
             });
         }
+        const btnFinalizar = document.getElementById('finalizar-compra');
+        if (btnFinalizar) {
+            // Mostrar el botón solo si hay productos en el carrito
+            if (carrito.length > 0) {
+                btnFinalizar.style.display = '';
+            } else {
+                btnFinalizar.style.display = 'none';
+            }
+            btnFinalizar.addEventListener('click', function(e) {
+                e.preventDefault();
+                const modal = new bootstrap.Modal(document.getElementById('modalFinalizarCompra'));
+                modal.show();
+            });
+        }
     }
 });
+
+
+
+////////// MENSAJE PRODUCTO AGREGADO AL CARRITO //////////
+function mostrarMensajeCarrito(mensaje) {
+    const div = document.getElementById('mensaje-carrito');
+    if (div) {
+        div.textContent = mensaje;
+        div.classList.add('mostrar');
+        setTimeout(() => {
+            div.classList.remove('mostrar');
+        }, 1800);
+    }
+}
+
+
+
+////////// API RESEÑAS //////////
+document.addEventListener('DOMContentLoaded', function() {
+    if (document.getElementById('contenido')) {
+        traer();
+    }
+});
+function traer() {
+    const contenido = document.getElementById("contenido"); // Selecciona el id="contenido" del html
+    fetch('https://randomuser.me/api') // Llamada a la API
+        .then(res => res.json()) // Convierte la respuesta de la API a JSON (objeto)
+        .then(res => {
+            console.log(res); // Mostrar toda la respuesta en consola.
+            console.log(res.results[0].email); // Mostrar solo el email en consola.
+
+            // Crear el contenido dinámicamente
+            contenido.innerHTML = `
+                <img src="${res.results[0].picture.large}" width="150px" class="img-fluid rounded-circle">
+                <p>Nombre: ${res.results[0].name.first}</p>
+                <p>Email: ${res.results[0].email}</p>
+            `;
+        })
+        .catch(error => console.error('Error al obtener los datos:', error)); // Manejo de errores
+}
